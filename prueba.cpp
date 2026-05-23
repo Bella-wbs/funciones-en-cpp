@@ -5,55 +5,55 @@
 #include <windows.h>
 using namespace std;
 
-void menuprincipal(){
-    std::setlocale(LC_ALL, "Spanish");
-    std::printf("-----Bienvenido a la calculadora cientifica-----\n");
-    std::printf("Selecciona la operacion a realizar: \n");
-    std::printf("1. Suma\n");
-    std::printf("2. Resta\n");
-    std::printf("3. Multiplicacion\n");
-    std::printf("4. Division\n");
+double suma(double a, double b) {
+    return a + b;
+}
+
+double resta(double a, double b) {
+    return a - b;
+}
+
+double multiplicacion(double a, double b) {
+    return a * b;
+}
+
+double division(double a, double b) {
+    return a / b;
+}
+
+double potenciacion(double a, double b) {
+    return pow(a, b);
+}
+
+double raizcuadrada(double a) {
+    return sqrt(a);
 }
 
 
-
 int main()
-{ double num1, num2, res;
-    menuprincipal();
-    int opcion;
-    std::cin >> opcion;
+{
+    std::setlocale(LC_ALL, "Spanish");
+    printf("----Bienvenido a la calculadora científica----\n");
+    printf("Escoje la operación que deseas realizar:\n");
+    printf("1. Suma\n");
+    printf("2. Resta\n");
+    printf("3. Multiplicación\n");
+    printf("4. División\n");
+    printf("5. Potenciación\n");
+    printf("6. Raíz cuadrada\n");
+    printf("7. Conversion");
 
-    std::printf("Ingresa el primer numero: ");
-    std::cin >> num1;
-    std::printf("Ingresa el segundo numero: ");
-    std::cin >> num2;
+switch (opcion) {
+    case 1: suma(); break;
+    case 2: resta(); break;
+    case 3: multiplicacion(); break;
+    case 4: division(); break;
+    case 5: potenciacion(); break;
+    case 6: raiz_cuadrada(); break;
+    
 
-    switch (opcion) {
-        case 1:
-            res = num1 + num2;
-            std::printf("El resultado de la suma es: %.2f\n", res);
-            break;
-        case 2:
-            res = num1 - num2;
-            std::printf("El resultado de la resta es: %.2f\n", res);
-            break;
-        case 3:
-            res = num1 * num2;
-            std::printf("El resultado de la multiplicacion es: %.2f\n", res);
-            break;
-        case 4:
-            if (num2 != 0) {
-                res = num1 / num2;
-                std::printf("El resultado de la division es: %.2f\n", res);
-            } else {
-                std::printf("Error: No se puede dividir por cero.\n");
-            }
-            break;
-        default:
-            std::printf("Opcion no valida.\n");
-    }
-  
 
-system("pause");
+
+    system("pause");
     return 0;
 }
