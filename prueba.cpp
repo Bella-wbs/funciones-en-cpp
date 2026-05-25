@@ -29,6 +29,9 @@ double raizcuadrada(double a) {
     return sqrt(a);
 }
 
+double conversioncelsiusfahrenheit(double a) {
+    return a * 9 / 5 + 32; // Celsius a Fahrenheit
+}
 
 int main()
 {
@@ -50,7 +53,8 @@ switch (opcion) {
     case 4: division(); break;
     case 5: potenciacion(); break;
     case 6: raiz_cuadrada(); break;
-    
+    case 7: conversion_celsius_fahrenheit(); break;
+    default: printf("Opción no válida\n"); break;
 
 
 
