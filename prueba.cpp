@@ -3,6 +3,7 @@
 #include <cstdio>
 #include <windows.h>
 using namespace std;
+//declaracion de librerias a utilizar
 
 double suma(double a, double b) {
     return a + b;
@@ -36,6 +37,8 @@ double conversionfahrenheitacelsius(double a) {
     return (a - 32.0) * 5.0 / 9.0; // Fahrenheit a Celsius
 }
 
+//declaración de funciones para cada operación  
+
 int main()
 {
 
@@ -48,14 +51,14 @@ int main()
     printf("5. Potenciacion\n");
     printf("6. Raiz cuadrada\n");
     printf("7. Conversion\n");
-
+//se muestra el menú princicapal
     int opcion;
     scanf("%d", &opcion);
-
+//se escanea la opción que eliga el usuario
     double a = 0.0;
     double b = 0.0;
     double resultado = 0.0;
-
+//definición de variables para almacenar los números y el resultado
     switch (opcion) {
         case 1:
             printf("Ingresa dos numeros: ");
@@ -101,7 +104,7 @@ int main()
                 printf("Resultado: %g\n", resultado);
             }
             break;
-        case 7:
+        case 7: //en este caso, se muestran dos opciones para elegir el tipo de conversion de temperatura
             printf("1. Celsius a Fahrenheit\n");
             printf("2. Fahrenheit a Celsius\n");
             printf("Elige conversion: ");
@@ -118,12 +121,12 @@ int main()
                 printf("Resultado: %g °C\n", resultado);
             } else {
                 printf("Opcion de conversion no válida\n");
-            }
+            } 
             break;
         default:
             printf("Opcion no válida\n");
             break;
-    }
+    }//uso de ciclos y condicionales   
 
     system("pause");
     return 0;
